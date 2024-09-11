@@ -1,5 +1,5 @@
 # ABJ-Attack
-This repository contains the official implementation of our paper "[Figure it Out: Analyzing-based Jailbreak Attack on Large Language Models](https://arxiv.org/pdf/2407.16205)"
+This repository contains official implementation of our paper "[Figure it Out: Analyzing-based Jailbreak Attack on Large Language Models](https://arxiv.org/pdf/2407.16205)"
 
 [![arXiv: paper](https://img.shields.io/badge/arXiv-paper-red.svg)](https://arxiv.org/abs/2407.16205)
 ![Jailbreak Attacks](https://img.shields.io/badge/Jailbreak-Attacks-yellow.svg?style=plastic)
