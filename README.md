@@ -21,7 +21,7 @@ Please feel free to contact linshizjsu@gmail.com if you have any questions.
 - (**2024/07/31**) We have released the official code of ABJ-Attack!
 - (**2024/07/23**) Our paper is on arXiv! Check it out [here](https://arxiv.org/abs/2407.16205)!
 - (**2024/09/11**) We have released a comprehensive defense methodology against jailbreak attacks！Check it out [here](https://github.com/theshi-1128/llm-defense)!
-- (**2024/09/26**) We have released a comprehensive and accurate LLM jailbreak attack benchmark including all current jailbreak attack methods！Check it out [here](https://github.com/theshi-1128/jailbreak-bench)!
+- (**2024/09/26**) We have released a comprehensive LLM jailbreak attack benchmark including all current jailbreak attack methods！Check it out [here](https://github.com/theshi-1128/jailbreak-bench)!
 
 
 ## Overview
