@@ -6,7 +6,7 @@ This repository contains official implementation of our paper "[Figure it Out: A
 ![Large Language Models](https://img.shields.io/badge/LargeLanguage-Models-green.svg?style=plastic)
 [![license: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Please feel free to contact linshizjsu@gmail.com if you have any questions.
+Please feel free to contact linshizjgsu@gmail.com if you have any questions.
 
 ## Table of Contents
 
