@@ -27,10 +27,11 @@ Please feel free to contact linshizjgsu@gmail.com if you have any questions.
 ## Overview
 
 This repository shares the code of our latest work on LLMs jailbreaking. In this work:
+    
+- We uncover the security risks in state-of-the-art LLMs during complex reasoning process and propose Analyzing-based Jailbreak (ABJ), a novel and efficient jailbreak attack method designed to assess these vulnerabilities.
+- We conduct comprehensive experiments on state-of-the-art open-source and closed-source LLMs. The experimental results demonstrate that ABJ exhibits exceptional attack effectiveness, transferability, and efficiency across different LLMs compared to other baselines.
+- We demonstrate the robustness and flexibility of ABJ and reveal the reason why it outperforms other baselines. Additionally, we discuss several efficient defense strategies to mitigate ABJ without compromising the model's reasoning capabilities.
 
-- We further explore the boundary of jailbreak attacks on LLMs and propose ABJ, the first jailbreak attack method specifically designed to assess LLMs’ safety in handling analyzing-based tasks. ABJ generalizes jailbreak attack prompts in two steps: data preparation and data analysis.
-- We conduct comprehensive experiments on both opensource (Llama-3, Qwen-2, GLM-4) and closed-source (GPT-3.5-turbo, GPT-4-turbo, Claude-3) LLMs. The results demonstrate that ABJ exhibits exceptional attack effectiveness and efficiency, achieving 94.8% ASR on GPT-4-turbo, while the AE is around 1.
-- We show the robustness of ABJ when facing different defense strategies, indicating that mitigating this attack might be difficult. Furthermore, by transforming and modifying the ABJ method, we can enable more stealthy and effective jailbreak attacks on a wider range of harmful scenarios, extending beyond the limitations of finite datasets, which makes it more difficult to defend against. Notably, the modified ABJ has achieved over 85% ASR on Llama-3 and Claude-3, which are considered two of the most secure LLMs by far.
 
 <p align="center">
   <img src="ABJ.png" width="900"/>
