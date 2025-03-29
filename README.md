@@ -39,19 +39,27 @@ This repository shares the code of our latest work on LLMs jailbreaking. In this
 
 
 ## Argument Specification
-
-- `attack_method`: We implement `4` kind of ABJ Attack, including `original_ABJ`, `modified_ABJ`, `code_based_ABJ`,`adversarial_ABJ`.
   
 - `target_model`: The name of target model.
+
+- `assist_model`: The name of assist model.
+
+- `judge_model`: The name of judge model.
   
-- `attack_rounds`: Number of iteration rounds, default is `3`.
-  
+- `max_attack_rounds`: Number of attack iteration rounds, default is `3`.
+
+- `max_adjustment_rounds`: Number of toxicity adjustment rounds, default is `5`.
+
 - `target_model_cuda_id`: Number of the GPU for target model, default is `cuda:0`.
+
+- `assist_model_cuda_id`: Number of the GPU for assist model, default is `cuda:1`.
+
+- `judge_model_cuda_id`: Number of the GPU for judge model, default is `cuda:2`.
 
   
 ## Quick Start
 
-Before you start, you should replace the necessary information in `llm/api_config.py` and `llm/llm_model.py`.
+Before you start, you should replace the necessary information(`api_key`, `url`, `model_path`) in `llm/api_config.py` and `llm/llm_model.py`.
 
 
 1. Clone this repository:
@@ -64,7 +72,7 @@ Before you start, you should replace the necessary information in `llm/api_confi
 
    ```sh
    cd ABJ-Attack
-   conda create -n ABJ python==3.10
+   conda create -n ABJ python==3.11
    conda activate ABJ
    pip install -r requirements.txt
    ```
@@ -73,18 +81,17 @@ Before you start, you should replace the necessary information in `llm/api_confi
 
      ```sh
      python ABJ.py \
-     -- attack_method [ATTACK METHOD] \
      -- target_model [TARGET MODEL] \
-     -- attack_rounds [ATTACK ROUNDS] \
+     -- max_attack_rounds [ATTACK ROUNDS] \
      -- target_model_cuda_id [CUDA ID]
      ```
 
-    For example, to run `original_ABJ` with `gpt-4-turbo-2024-04-09` as the target model on `CUDA:0` for `3` rounds, run
+    For example, to run `original_ABJ` with `gpt-4o-2024-11-20` as the target model on `CUDA:0` for `3` rounds, run
   
      ```sh
      python ABJ.py \
      -- attack_method original_ABJ \
-     -- target_model gpt4 \
+     -- target_model gpt4o \
      -- attack_rounds 3 \
      -- target_model_cuda_id cuda:1
      ```
