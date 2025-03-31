@@ -90,9 +90,8 @@ Before you start, you should replace the necessary information(`api_key`, `url`,
   
      ```sh
      python ABJ.py \
-     -- attack_method original_ABJ \
      -- target_model gpt4o \
-     -- attack_rounds 3 \
+     -- max_attack_rounds 3 \
      -- target_model_cuda_id cuda:1
      ```
 
