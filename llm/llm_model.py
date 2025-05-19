@@ -233,7 +233,6 @@ class LLMModel(object):
             pixel_values = load_image(img, max_num=12).to(torch.bfloat16).to(self.device)
             generation_config = dict(max_new_tokens=2048, do_sample=False, pad_token_id=self.tokenizer.eos_token_id)
 
-            # single-image single-round conversation (单图单轮对话)
             question = '<image>\n' + prompt
             response = self.model.chat(self.tokenizer, pixel_values, question, generation_config)
             return response
