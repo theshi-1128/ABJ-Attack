@@ -86,7 +86,7 @@ Before you start, you should replace the necessary information(`api_key`, `url`,
      -- target_model_cuda_id [CUDA ID]
      ```
 
-    For example, to run `original_ABJ` with `gpt-4o-2024-11-20` as the target model on `CUDA:0` for `3` rounds, run
+    For example, to run `ABJ` with `gpt-4o-2024-11-20` as the target model on `CUDA:0` for `3` rounds, run
   
      ```sh
      python ABJ.py \
