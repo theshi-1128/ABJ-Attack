@@ -1,11 +1,14 @@
 import json
+import re
 
 
 def format_json_to_data(json_str):
-    if json_str.startswith("```json"):
-        json_str = json_str[7:].strip()
-    if json_str.endswith("```"):
-        json_str = json_str[:-3].strip()
+    pattern = r"\{.*\}"
+    match = re.search(pattern, json_str, re.DOTALL)
+
+    json_str = match.group(0)
+
+
     data = json.loads(json_str)
     output = "<data>\n"
     for key in data.keys():
