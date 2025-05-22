@@ -35,8 +35,6 @@ def pipeline_execution(target_models, assist_model, judge_model, df, judge_promp
                            max_attack_rounds, max_adjustment_rounds, output_dir):
 
     for index, row in tqdm(df.iterrows(), total=df.shape[0], desc="Processing"):
-        if index == 50:
-            break
         task = row['goal']
         data = get_data(task, assist_model)
         attack_prompt = get_attack_prompt(data)
