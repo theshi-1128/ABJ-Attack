@@ -95,7 +95,7 @@ def load_image(image_file, input_size=448, max_num=12):
 
 
 class LLMModel(object):
-    def __init__(self, model_name: str, device: str, temperature: float, top_p: float, dtype="auto"):
+    def __init__(self, model_name: str, device: str, temperature: float=None, top_p: float=None, dtype="auto"):
         self.dtype = dtype  # Set data type
         self.device = device  # Set device
         self.model_name = model_name  # Set model name
@@ -144,21 +144,21 @@ class LLMModel(object):
         Returns:
             str: The generated response.
         """
-        if self.model_name in ['gpt4o', 'claude3_haiku', 'deepseek_v3', 'glm4']:
-            temperature = self.temperature
-            top_p = self.top_p
-            url = model_list[self.model_name]['base_url']
-            api_key = model_list[self.model_name]['api_key']
-            model = model_list[self.model_name]['model_name']
-            response = get_response(prompt, url, api_key, model, temperature, top_p)
-            return response
-        elif self.model_name in ['gpt4o_vl']:
+        if self.model_name in ['gpt4o_vl']:
             temperature = self.temperature
             top_p = self.top_p
             url = model_list[self.model_name]['base_url']
             api_key = model_list[self.model_name]['api_key']
             model = model_list[self.model_name]['model_name']
             response = get_image_response(prompt, img, url, api_key, model, temperature, top_p)
+            return response
+        elif self.model_name in ['gpt4o', 'claude3_haiku', 'deepseek_v3', 'glm4']:
+            temperature = self.temperature
+            top_p = self.top_p
+            url = model_list[self.model_name]['base_url']
+            api_key = model_list[self.model_name]['api_key']
+            model = model_list[self.model_name]['model_name']
+            response = get_response(prompt, url, api_key, model, temperature, top_p)
             return response
         elif self.model_name in ['o1', 'r1']:
             url = model_list[self.model_name]['base_url']

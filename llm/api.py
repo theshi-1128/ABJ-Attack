@@ -64,6 +64,7 @@ def get_image_response(prompt, image_path, url, api_key, model_name, temperature
     try:
         with open(image_path, "rb") as image_file:
             base64_image = base64.b64encode(image_file.read()).decode("utf-8")
+
         response = client.chat.completions.create(
             model=model_name,
             messages=[
