@@ -69,7 +69,3 @@ def pipeline_execution(target_models, assist_model, judge_model, df, judge_promp
                                        saver)
 
     saver.final_save()
-    # generate_visual_descriptions(
-    #     llm=assist_model,
-    #     input_csv_path=output_dir,
-    # )

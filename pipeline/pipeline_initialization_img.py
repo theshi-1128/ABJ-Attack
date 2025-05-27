@@ -16,10 +16,12 @@ def pipeline_initialization(args):
 
     # Read the dataset from the specified directory
     df = pd.read_csv(args.dataset_dir)
-    output_dir = f'./output/ABJ_text/{model_names}_{dataset_name}.csv'
-
+    text_output_dir = f'./output/ABJ_img/text/{model_names}_{dataset_name}.csv'
+    img_output_dir = f'./output/ABJ_img/img'
     # Initialize the IntervalSaver for saving outputs at specified intervals
-    saver = IntervalSaver(output_dir, interval=args.save_interval, columns=columns)
+    saver = IntervalSaver(text_output_dir, interval=args.save_interval, columns=columns)
+    if not os.path.exists(img_output_dir) and img_output_dir:
+        os.makedirs(img_output_dir)
 
     return {
         'df': df,
@@ -28,5 +30,6 @@ def pipeline_initialization(args):
         'columns': columns,
         'max_attack_rounds': args.max_attack_rounds,
         'max_adjustment_rounds': args.max_adjustment_rounds,
-        'output_dir': output_dir
+        'text_output_dir': text_output_dir,
+        'img_output_dir': img_output_dir
     }
