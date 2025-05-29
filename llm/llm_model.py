@@ -101,10 +101,10 @@ class LLMModel(object):
         self.model_name = model_name  # Set model name
         self.temperature = temperature
         self.top_p = top_p
-        if self.model_name in ['qwen2_5_vl']:
+        if self.model_name in ['llama3', 'qwen2', 'intern3_vl']:
             self.model_path = MODEL_LIST[self.model_name][0]  # Get model path from MODEL_LIST
             self.tokenizer, self.model = self._load_model_and_tokenizer()  # Load model and tokenizer
-        elif self.model_name in ['llama3', 'qwen2', 'intern3_vl']:
+        elif self.model_name in ['qwen2_5_vl']:
             self.model_path = MODEL_LIST[self.model_name][0]  # Get model path from MODEL_LIST
             self.model, self.processor = self._load_model_and_tokenizer()  # Load model and tokenizer
 
