@@ -26,8 +26,11 @@ def format_json_to_data(json_str: str) -> str:
 
     output = "<data>\n"
     for key, items in data.items():
-        if not isinstance(items, list):
+        if isinstance(items, list):
+            items = [str(item) for item in items]
+        else:
             items = [str(items)]
         output += f"{key}: {', '.join(items)}\n"
     output += "</data>"
     return output
+
