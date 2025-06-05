@@ -24,9 +24,10 @@ def get_data(task, model):
         json_str = match.group(0)
         data = json.loads(json_str)
         output = "<data>\n"
-        for key in data.keys():
-            items = data[key]
-            if not isinstance(items, list):
+        for key, items in data.items():
+            if isinstance(items, list):
+                items = [str(item) for item in items]
+            else:
                 items = [str(items)]
             output += f"{key}: {', '.join(items)}\n"
         # output += f"Task: {task}\n"
