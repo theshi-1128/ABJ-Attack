@@ -28,9 +28,9 @@ Please feel free to contact linshizjgsu@gmail.com if you have any questions.
 
 This repository shares the code of our latest work on LLMs jailbreaking. In this work:
     
-- We identify and explore a novel jailbreak attack paradigm that shifts from input-level to reasoning-level manipulation, uncovering an overlooked attack surface in the reasoning process of aligned language models.
-- We propose Analyzing-based Jailbreak (ABJ), a black-box attack that manipulates model’s multi-step reasoning process to induce harmful outputs. ABJ introduces a unified multimodal framework that enables reasoning chain manipulation in both LLMs and VLMs, revealing alignment vulnerabilities across modalities.
-- We conduct extensive experiments on state-of-the-art LLMs, VLMs, and RLMs, showing that ABJ outperforms baselines in attack effectiveness, transferability, and efficiency. Additionally, we analyze key factors contributing to its effectiveness and discuss potential defense strategies.
+- We investigate a novel jailbreak attack paradigm that transitions from input-level obfuscation to reasoning-level manipulation, unveiling a previously overlooked attack surface inherent in the chain-of-thought reasoning trajectory of LLMs.
+- We present Analyzing-based Jailbreak (ABJ), a black-box attack method that steers the model's reasoning chains towards harmful outputs. ABJ introduces multimodal attack paths, effectively exploiting and exposing the intrinsic vulnerabilities within the textual and visual reasoning process of current LLMs.
+- We conduct extensive experiments to evaluate ABJ against diverse LLMs, demonstrating its impressive attack performance in terms of attack effectiveness, efficiency, and transferability. Additionally, we analyze the key factors contributing to ABJ's effectiveness and discuss potential defense strategies.
 
 
 <p align="center">
