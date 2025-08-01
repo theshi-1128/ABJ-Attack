@@ -34,7 +34,7 @@ This repository shares the code of our latest work on LLMs jailbreaking. In this
 
 
 <p align="center">
-  <img src="ABJ.png" width="900"/>
+  <img src="overview.pdf" width="900"/>
 </p>
 
 
