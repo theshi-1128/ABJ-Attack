@@ -1,5 +1,5 @@
 # ABJ-Attack
-This repository contains official implementation of our paper "LLMs can be Dangerous Reasoners: Analyzing-based Jailbreak Attack on Large Language Models"
+This repository contains official implementation of our paper "LLMs Can Be Dangerous Reasoners: Analyzing-based Jailbreak Attack on Large Language Models"
 
 
 ## Overview
